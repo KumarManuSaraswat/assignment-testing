@@ -6,10 +6,10 @@ import Header from "./Header";
 
 describe("Header component", () => {
   it("renders the title text in the heading", () => {
-    render(<Header title="My App" isLoggedIn={false} />);
+    render(<Header title="My App" isLoggedIn={false} />)
 
     // Use getByRole to find the heading
-    const heading = screen.getByRole("heading", { level: 1 });
+    const heading = screen.getByRole("heading", { level: 1 })
     expect(heading).toBeInTheDocument();
     expect(heading).toHaveTextContent("My App");
   });
@@ -18,7 +18,7 @@ describe("Header component", () => {
     render(<Header title="My App" isLoggedIn={false} />);
 
     // Use getByRole with aria-label
-    const loginButton = screen.getByRole("button", { name: /login/i });
+    const loginButton = screen.getByRole("button", { name: /login/i })
     expect(loginButton).toBeInTheDocument();
     expect(loginButton).toHaveTextContent("Login");
   });
